@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <div class="title">
+            <h3>Produit</h3>
+        </div>
+        <div class="cart-item" data-price="20">
+            <img src="/new-arrivals/3.webp" alt="Product Image">
+            <div class="item-details">
+                <h2>Robe Sexy</h2>
+                <p>Description: A short description of the product.</p>
+                <div class="quantity-control">
+                    <p> <strong>$20</strong></p>
+                    <button class="quantity-btn" onclick="updateQuantity(this, -1)">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="payment">
+                <h3>Payment</h3>
+                <p class="items-number">
+                    <span id="items-number">3</span> items in your cart
+                </p>
+            </div>
+            <div class="summary-item">
+                <p>Subtotal:</p>
+                <span id="subtotal">$100</span>
+            </div>
+            <div class="summary-item">
+                <p>Delivery :</p>
+                <span id="shipping">$5</span>
+            </div>
+            <div class="summary-item">
+                <p><strong>Total :</strong></p>
+                <span id="subtotal">$100</span>
+            </div>
+            </div>
+            <div class="btn">
+                <button class="checkout-btn flex-1"><a href="/checkout.html">Proceed to Checkout</a></button>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
