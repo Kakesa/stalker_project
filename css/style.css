@@ -83,6 +83,20 @@ main {
 .cart-summary p {
     margin: 0.5rem 0;
 }
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.summary-item p {
+    margin: 0;
+}
+
+.summary-item span {
+    font-weight: bold;
+}
 
 .checkout-btn {
     background-color: #1d1d1d;
@@ -130,6 +144,14 @@ main {
 
     .cart-summary {
         text-align: left;
+    }
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .summary-item span {
+        margin-top: 0.5rem; 
     }
 }
 
