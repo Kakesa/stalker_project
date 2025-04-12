@@ -38,7 +38,7 @@ a {
     color: white;
 }
 a:hover {
-    color: #2980b9;
+    color: #00000088;
 }
 main {
     padding: 2rem;
@@ -47,21 +47,26 @@ main {
 .cart-item {
     display: flex;
     align-items: center;
-    background-color: white;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.cart-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 1rem;
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; 
+    height: auto; 
+    background-color: #e3dfdf90; 
+    padding: 1.9rem; 
 }
 
-.item-details {
-    flex: 1;
+.image-container img {
+    display: block;
+    max-width: 100%; 
+    height: auto; 
 }
 
 .quantity-control {
@@ -80,7 +85,7 @@ main {
 }
 
 .quantity-btn:hover {
-    background-color: #2980b9;
+    background-color: #ccc;
 }
 
 .cart-summary {
@@ -145,6 +150,44 @@ main {
     color: #333;
 }
 
+
+.visa-icon {
+    flex: 0 0 30%; /* L'icône occupe 30% de l'espace */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 1rem; 
+    margin-top: 1rem;
+    padding: 1rem; 
+    background-color: #f9f9f9; 
+}
+
+.checkout-btn {
+    flex: 0 0 70%; 
+    background-color: #1d1d1d;
+    color: white;
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.checkout-btn:hover {
+    background-color: #2c342f;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
@@ -154,20 +197,24 @@ main {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
+        border-top: 1px solid #ccc;
+        padding: 1rem 0;
+        margin-top: 1rem;
      }
     .cart-item {
         flex-direction: row; 
-        align-items: flex-start;
+        align-items: center;
+        gap: 1rem; 
+        
     }
 
-    .cart-item img {
-        width: 50%; 
-        height: 50%;
-        margin-right: 1rem; 
+    .image-container {
+        width: 50%;
+        margin-bottom: 1rem; 
     }
 
     .item-details {
-        flex: 1; 
+        text-align: center; 
     }
 
     .quantity-control {
@@ -201,6 +248,14 @@ main {
 }
 
 @media (max-width: 480px) {
+    .image-container {
+        width: 100%; 
+        padding: 0.5rem; 
+    }
+
+    .item-details {
+        text-align: center; 
+    }
     header h1 {
         font-size: 1.5rem;
     }
